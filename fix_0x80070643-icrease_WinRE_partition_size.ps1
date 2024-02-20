@@ -581,12 +581,9 @@ if (!$WinREStatus)
 $WinRELocationItems = $WinRELocation.Split('\')
 foreach ($item in $WinRELocationItems)
 {
-	LogMessage("item: $item")
 	if ($item -like "partition*")
 	{
-		LogMessage("$item -like partition*")
 		$WinREPartitionIndex = ExtractNumbers($item)
-		LogMessage("ExtractNumbers($item) ${ExtractNumbers($item)}")
 	}
 }
 LogMessage("WinRE Partition Index: " + $WinREPartitionIndex)
